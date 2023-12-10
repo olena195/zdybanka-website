@@ -1,9 +1,20 @@
-export const title = "asdad";
+export const lang = ['en', 'uk']
+export const layout = 'base.jsx'
 
-export default (data: {title: typeof title}) => (
-    <>
-        <link rel="stylesheet" href="/styles.css"/>
-        <h1>{data.title}</h1>
-        <p>This is my first post using lume. I hope you like it!</p>
-    </>
-);
+
+
+export const title = "page title";
+
+export const bannerTitle = 'Thank You for Supporting Ukraine!'
+
+export const uk = {
+    title: 'заголовок',
+    bannerTitle: 'Дякую за підтримку України!'
+}
+export default ({title = '', bannerTitle, comp}) => {
+    return (
+            <>
+                <comp.flagBanner text={bannerTitle}/>
+            </>
+    );
+};
