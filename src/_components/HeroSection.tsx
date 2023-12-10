@@ -4,7 +4,7 @@ export default ({
                     download = ''
                 }) => {
     return <section class={'flex flex-col px-2 py-10 items-center justify-center gap-32'}>
-        <h1 class={'font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center'}>{title}</h1>
+        <h1 class={'font-extrabold text-center'}>{title}</h1>
         <p class={'mt-6 text-lg text-center max-w-3xl mx-auto'}>{description}</p>
         <div class={'flex flex-col gap-1 items-center justify-center'}>
             <a href="#download"
