@@ -25,27 +25,27 @@ const site = lume({
 
 site.use(base_path());
 site.use(esbuild());
-// site.use(favicon({
-//     input: "/favicon.png",
-// }));
+site.use(favicon({
+    input: "/favicon.png",
+}));
 site.use(jsx_preact());
-// site.use(metas());
-// site.use(minify_html());
-// site.use(multilanguage({
-//     languages: ["en", "uk"], // Available languages
-//     defaultLanguage: "en", // The default language
-// }));
-// site.use(nav());
-// site.use(sitemap());
+site.use(metas());
+site.use(minify_html());
+site.use(multilanguage({
+    languages: ["en", "uk"], // Available languages
+    defaultLanguage: "en", // The default language
+}));
+site.use(nav());
+site.use(sitemap());
 site.use(picture());
 site.use(transform_images({
     cache: false, // Disable cache
 }));
-// site.use(tailwindcss(config));
-// site.use(relative_urls());
+site.use(tailwindcss(config));
+site.use(relative_urls());
 site.use(resolve_urls());
-// site.use(source_maps());
-// site.use(svgo());
-// site.use(postcss());
+site.use(source_maps());
+site.use(svgo());
+site.use(postcss());
 
 export default site;
