@@ -6,6 +6,7 @@ export default ({title, children}) => (<html lang={'uk'}>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <meta name="color-scheme" content="dark"/>
+    <meta name="google-site-verification" content="-RbpAq2XwaLvBfAOCxCPMKjVDFImY6GKTqsdsQTUKpg" />
 
 </head>
 <body>
