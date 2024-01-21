@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html {
+    background-color: #212529;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    @apply text-sky-200;
+}
 
 h1 {
     @apply text-4xl sm:text-5xl lg:text-6xl;

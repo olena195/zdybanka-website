@@ -27,12 +27,7 @@ export default ({title = '', bannerTitle = '', downloadText = '', support, comp}
             <>
                 <div class={'flex flex-col items-center'}>
                     <comp.flagBanner text={bannerTitle}/>
-                    {/*<img*/}
-                    {/*        alt={'name'}*/}
-                    {/*        src="./hero-bg.png"*/}
-                    {/*        transform-images="avif webp 320@2 320@3 180@2 180@3"*/}
-                    {/*        transformImages="avif webp 320@2 320@3 180@2 180@3"*/}
-                    {/*/>*/}
+                    <comp.GamePoster/>
 
                     <comp.HeroSection title={'GAME TITLE'}
                                       description={'AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME '}
