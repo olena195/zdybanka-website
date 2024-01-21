@@ -5,6 +5,11 @@
     /opt/buildhome/.deno/bin/deno task build \
   """
 
+[[redirects]]
+from = "/*.css"
+to = "/:splat"
+status = 200
+
 
 [[redirects]]
   from = "/*"
