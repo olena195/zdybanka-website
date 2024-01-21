@@ -1,17 +1,10 @@
 export const layout = 'base.jsx'
 
 
-export const title = "page title";
+export const title = "Лабораторія Дотторе: смертельне лікування";
 
-export const bannerTitle = 'Thank You for Supporting Ukraine!'
+export const bannerTitle = 'Дякую за підтримку України!'
 
-export const downloadText = 'Download'
-
-
-export const support = {
-    title: 'Support us',
-    text: 'Support'
-}
 
 export const disclaimer = {
     title: 'Увага!',
@@ -34,7 +27,7 @@ export const disclaimer = {
 
 type Props = typeof import('./index.tsx') & { comp: Record<string, any> }
 
-export default ({title, bannerTitle, downloadText, support, disclaimer, comp}: Props) => {
+export default ({title, bannerTitle,  disclaimer, comp}: Props) => {
     return (
             <>
                 <div className={'flex flex-col items-center'}>
