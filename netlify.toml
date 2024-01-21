@@ -5,20 +5,54 @@ command = """
     /opt/buildhome/.deno/bin/deno task build \
   """
 
+
+
+
+
+
+# Набір правил переадресування щоб показувати попередження про вік
+# якщо у відвідувача відсутні Cookie = "is-disclamer-accepted".
+# Застосовується перше підходяще правило.
+# Немає можливості використати "*" в середині шляху щоб встановити правило по розширенню файлів.
+
+# Дозволяє доступ до всіх файлів у assets папці
 [[redirects]]
-from = "/*.css"
-to = "/:splat"
+from = "/assets/*"
+to = "/assets/:splat"
+status = 200
+force = true
+
+# Набір правил які дозволяють доступ до окремих файлів у корені
+[[redirects]]
+from = "/apple-*"
+to = "/apple-:splat"
+status = 200
+force = true
+[[redirects]]
+from = "/favicon*"
+to = "/favicon:splat"
+status = 200
+force = true
+[[redirects]]
+from = "/robots*"
+to = "/robots:splat"
+status = 200
+force = true
+[[redirects]]
+from = "/sitemap*"
+to = "/sitemap:splat"
 status = 200
 force = true
 
 
-
+# Дозволяє перегляд всього іншого контенту тільки за наявності Cookie = "is-disclamer-accepted"
 [[redirects]]
 from = "/*"
 to = "/:splat"
 status = 200
 conditions = { Cookie = "is-disclamer-accepted" }
 
+# Забороняє перегляд всього контенту відкриваючи натомість вміст /instruction
 [[redirects]]
 from = "/*"
 to = "/instruction"
