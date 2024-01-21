@@ -21,7 +21,6 @@ import config from './tailwind.config.js';
 
 const site = lume({
     src: "./src",
-    location: new URL("https://cawa-93.github.io/dotore-website/"),
 });
 
 site.use(base_path());
