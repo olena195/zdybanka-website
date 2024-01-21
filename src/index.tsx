@@ -1,4 +1,3 @@
-export const lang = ['en', 'uk']
 export const layout = 'base.jsx'
 
 
@@ -14,20 +13,38 @@ export const support = {
     text: 'Support'
 }
 
-export const uk = {
-    title: 'заголовок',
-    bannerTitle: 'Дякую за підтримку України!',
-    support: {
-        title: 'Підримати нас',
-        text: 'підтримати',
-    },
+export const disclaimer = {
+    title: 'Увага!',
+    text: 'Гра містить сцени жорстокості та насильства'
 }
-export default ({title = '', bannerTitle = '', downloadText = '', support, comp}) => {
+
+// export const uk = {
+//     title: 'заголовок',
+//     bannerTitle: 'Дякую за підтримку України!',
+//     downloadText: 'downloadText',
+//     support: {
+//         title: 'Підримати нас',
+//         text: 'підтримати',
+//     },
+//     disclaimer: {
+//         title: 'Увага!',
+//         text: 'Гра містить сцени жорстокості та насильства'
+//     }
+// }
+
+type Props = typeof import('./index.tsx') & { comp: Record<string, any> }
+
+export default ({title, bannerTitle, downloadText, support, disclaimer, comp}: Props) => {
     return (
             <>
                 <div class={'flex flex-col items-center'}>
                     <comp.flagBanner text={bannerTitle}/>
                     <comp.GamePoster/>
+
+                    <comp.AlertInfo>
+                        <h2 className={'text-5xl'}>{disclaimer.title}</h2>
+                        <p className={'text-2xl'}>{disclaimer.text}</p>
+                    </comp.AlertInfo>
 
                     <comp.HeroSection title={'GAME TITLE'}
                                       description={'AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME '}

@@ -31,12 +31,12 @@ site.use(favicon({
 }));
 site.use(jsx_preact());
 site.use(metas());
-site.use(minify_html());
-site.use(multilanguage({
-    languages: ["en", "uk"], // Available languages
-    defaultLanguage: "en", // The default language
-}));
-site.use(nav());
+// site.use(minify_html());
+// site.use(multilanguage({
+//     languages: ["uk"], // Available languages
+//     defaultLanguage: "uk", // The default language
+// }));
+// site.use(nav());
 site.use(sitemap());
 site.use(picture());
 site.use(transform_images({
@@ -45,7 +45,7 @@ site.use(transform_images({
 site.use(tailwindcss(config));
 site.use(relative_urls());
 site.use(resolve_urls());
-site.use(source_maps());
+// site.use(source_maps());
 site.use(svgo());
 site.use(postcss());
 
