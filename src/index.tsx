@@ -37,7 +37,7 @@ type Props = typeof import('./index.tsx') & { comp: Record<string, any> }
 export default ({title, bannerTitle, downloadText, support, disclaimer, comp}: Props) => {
     return (
             <>
-                <div class={'flex flex-col items-center'}>
+                <div className={'flex flex-col items-center'}>
                     <comp.flagBanner text={bannerTitle}/>
                     <comp.GamePoster/>
 
@@ -46,26 +46,10 @@ export default ({title, bannerTitle, downloadText, support, disclaimer, comp}: P
                         <p className={'text-2xl'}>{disclaimer.text}</p>
                     </comp.AlertInfo>
 
-                    <comp.HeroSection title={'GAME TITLE'}
-                                      description={'AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME AWESOME GAME '}
-                                      download={downloadText}/>
+                    <comp.DownloadLink>
+                        Завантажити
+                    </comp.DownloadLink>
 
-                    <comp.ContentSection id={'download'}>
-                        <h2>{downloadText}</h2>
-
-                        <ul>
-                            <li>Windows</li>
-                            <li>Linux</li>
-                            <li>MacOS</li>
-                            <li>Online</li>
-                        </ul>
-                    </comp.ContentSection>
-
-
-                    <comp.ContentSection id={'support'}>
-                        <h2>{support.title}</h2>
-                        <p>{support.text}</p>
-                    </comp.ContentSection>
                 </div>
             </>
     );
