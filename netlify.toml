@@ -15,4 +15,5 @@
 [[redirects]]
   from = "/*"
   to = "/instruction"
-  status = 200!
+  force = true
+  status = 200
