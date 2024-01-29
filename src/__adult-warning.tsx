@@ -3,11 +3,7 @@ export const layout = 'base.jsx'
 export const title = "Цей сайт призначений для осіб старше 18 років";
 export const description = 'Вам виповнилось 18 років?'
 
-type Props = typeof import('./adult-warning.tsx') & { comp: Record<string, any> }
-
-export const js = `
-document.body.
-`;
+type Props = typeof import('./__adult-warning.tsx') & { comp: Record<string, any> }
 
 export default ({comp, title, description}: Props) => (
         <div className={'flex flex-col items-center justify-center min-h-[100dvh]'}>

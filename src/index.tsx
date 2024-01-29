@@ -38,7 +38,6 @@ export default ({title, bannerTitle,  disclaimer, comp}: Props) => {
                         <h2 className={'text-5xl'}>{disclaimer.title}</h2>
                         <p className={'text-2xl'}>{disclaimer.text}</p>
                     </comp.AlertInfo>
-
                     <comp.DownloadLink>
                         Завантажити
                     </comp.DownloadLink>

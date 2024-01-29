@@ -48,4 +48,28 @@ site.use(resolve_urls());
 site.use(svgo());
 site.use(postcss());
 
+
+
+const githubRepo = 'olena195/novel-dottore';
+let cache: string|null = null
+async function resolveLatestRelease(): Promise<string> {
+    if (cache) {
+        return cache;
+    }
+
+    const response = await fetch(`https://api.github.com/repos/${githubRepo}/releases/latest`)
+    if (!response.ok) {
+        throw new Error(`Can't load information about the latest release from ${githubRepo} repository`, {cause: response.clone()})
+    }
+
+    const release: { assets: { browser_download_url: string, name: string }[] } = await response.json()
+    const asset = release.assets.find(a => a.name.endsWith('pc.zip'))
+    if (!asset) {
+        throw new Error(`*pc.zip asset wasn't found in the latest release in ${githubRepo} repository`)
+    }
+    cache = asset.browser_download_url;
+    return cache;
+}
+site.data('latestRelease', await resolveLatestRelease())
+
 export default site;
