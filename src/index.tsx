@@ -81,7 +81,7 @@ export default ({title, bannerTitle,  disclaimer, comp}: Props) => {
                                 Якщо вам сподобалась гра і ви очікуєте на продовження — підтримайте розробників кавою!
                             </p>
 
-                            <a target="_blank" href="https://buymeacoffee.com/kozack">
+                            <a target="_blank" href="https://www.buymeacoffee.com/hai_tak">
                                 <svg height="50" viewBox="0 0 4169 913" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M564.724 212.38L564.098 212.012L562.648 211.569C563.232 212.062 563.962 212.347 564.724 212.38V212.38Z"
