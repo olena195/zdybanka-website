@@ -131,7 +131,11 @@ export default ({title, bannerTitle,  disclaimer, comp}: Props) => {
                     </comp.ContentSection>
 
                     <comp.ContentSection>
-                        <comp.SocialLinks/>
+                        <div className={'w-full max-w-screen-lg px-4 py-12'}>
+                            <h2 className={'text-center mb-8'}>Над грою працювали</h2>
+
+                            <comp.SocialLinks/>
+                        </div>
                     </comp.ContentSection>
                 </div>
             </>
