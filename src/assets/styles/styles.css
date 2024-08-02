@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body, html {
-    background-color: #212529;
-    font-family: "Comic Sans MS", "Comic Sans", system-ui, cursive;
-    @apply text-sky-200;
+    background-color: #79847C;
+    font-family: "Montserrat", sans-serif;
+    @apply text-white;
 }
 
 h1 {

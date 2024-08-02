@@ -1,9 +1,9 @@
-export default () => (<div className={'w-full  border-b-2 border-current overflow-hidden'}>
+export default () => (<div className={'w-full px-12 relative overflow-hidden'}>
     <img
             height={'320'}
             width={'1024'}
             alt={''}
-            className={'w-full flex-1 max-h-80 object-cover blur-lg absolute'}
+            className={'w-full h-full flex-1 left-0 absolute blur object-cover'}
             src="./assets/images/poster.png"
             transform-images="avif webp 800@2 800@3 180@2 180@3"
     />
@@ -11,16 +11,7 @@ export default () => (<div className={'w-full  border-b-2 border-current overflo
             height={'320'}
             width={'1024'}
             alt={'name'}
-            className={'w-full flex-1 max-w-screen-lg max-h-80 object-cover absolute mx-[50%] -translate-x-2/4'}
-            src="./assets/images/poster.png"
-            transform-images="avif webp 800@2 800@3 180@2 180@3"
-    />
-    <img
-            height={'320'}
-            width={'569'}
-            alt={'name'}
-            className={'max-h-80 object-fit relative mx-[50%] -translate-x-2/4'}
-            src="./assets/images/poster-dottore.png"
-            transform-images="avif webp 800@2 800@3 180@2 180@3"
+            className={'w-full my-12 relative flex-1 max-w-screen-lg mx-auto max-h-80 object-contain'}
+            src="./assets/images/poster-title.svg"
     />
 </div>)
