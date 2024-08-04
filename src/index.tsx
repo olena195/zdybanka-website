@@ -1,7 +1,7 @@
 export const layout = 'base.jsx'
 
 
-export const title = "Лабораторія Дотторе: смертельне лікування";
+export const title = "Один столик на двох";
 
 export const bannerTitle = 'Дякую за підтримку України!'
 
@@ -11,19 +11,7 @@ export const disclaimer = {
     text: 'Гра містить сцени жорстокості та насильства'
 }
 
-// export const uk = {
-//     title: 'заголовок',
-//     bannerTitle: 'Дякую за підтримку України!',
-//     downloadText: 'downloadText',
-//     support: {
-//         title: 'Підримати нас',
-//         text: 'підтримати',
-//     },
-//     disclaimer: {
-//         title: 'Увага!',
-//         text: 'Гра містить сцени жорстокості та насильства'
-//     }
-// }
+
 
 type Props = typeof import('./index.tsx') & { comp: Record<string, any> }
 
@@ -42,18 +30,18 @@ export default ({title, bannerTitle,  disclaimer, comp}: Props) => {
                     <comp.ContentSection>
                         <div className={'border-y-2 border-current py-12 grid gap-4 uppercase text-center text-xl'}>
                             <p>
-                                Візуальна новела по мотивам коміксу “Розмови опівночі”.
+                                Візуальна новела за мотивами коміксу “Розмови опівночі”.
                             </p>
 
                             <p>
                                 Головні герої, Ів (вовкулака) та Стефан (упир) йдуть на перше побачення. Ви маєте змогу
-                                не просто за цим наблюдати,
+                                не просто за цим поспостерігати,
                                 а й стати героем цієї події.
                             </p>
 
                             <p>
-                                Граючи за Стефана ви проведете цей затишний вечір у компанії Іва.
-                                А ваші дії приведуть вас до однієї з кінцівок гри.
+                                Граючи за Стефана, ви проведете цей затишний вечір у компанії Іва,
+                                а ваші дії приведуть вас до однієї з кінцівок гри.
                             </p>
 
                             <p>
